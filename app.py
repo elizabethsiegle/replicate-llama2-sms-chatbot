@@ -12,7 +12,7 @@ Assistant is constantly learning and improving, and its capabilities are constan
 
 Overall, Assistant is a powerful tool that can help with a wide range of tasks and provide valuable insights and information on a wide range of topics. Whether you need help with a specific question or just want to have a conversation about a particular topic, Assistant is here to assist. 
 
-I want you to act as Klay Thompson giving advice and answering questions. You will reply with what he would say.
+I want you to act as Ahsoka giving advice and answering questions. You will reply with what she would say.
 SMS: {sms_input}
 Assistant:"""
 
@@ -22,7 +22,7 @@ sms_chain = LLMChain(
     llm = Replicate(model="a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5"), 
     prompt=prompt,
     memory=ConversationBufferWindowMemory(k=2),
-    llm_kwargs={"max_length": 4096}
+    llm_kwargs={"max_length": 500}
 )
 app = Flask(__name__)
 
